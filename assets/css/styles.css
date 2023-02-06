@@ -1,0 +1,158 @@
+:root{
+    --white: #FFFFFF;
+    --main: #F5F6FF;
+    --gray: #979797;
+    --lila: #DC92EF;
+    --purple: #846cc7;
+    --main-shadow: #D3D5E3;
+    --main-text: #554D68;
+}
+
+/* Clases Generales */
+
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+.font_color{
+    color: var(--main-text);
+}
+
+.font_color_secondary{
+    color: var(--main);
+}
+
+/* Clases del header */
+.container_header{
+    height: 30vh;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(180deg, var(--purple), var(--lila));
+}
+
+/* Clases del modal */
+.modal-dialog,
+.modal-content {
+    height: 60vh;
+}
+
+.modal-header{
+    font-family: 'Poppins', sans-serif;
+    border: none;
+}
+
+.modal_img{
+    width: 100%;
+    aspect-ratio: 3/4;
+}
+
+/* Clases del main */
+.container_main{
+    background: var(--main);
+    font-family: 'Poppins', sans-serif;
+    min-height: 60vh;
+}
+
+.container_form{
+    min-width: 250px;
+    height: 50px;
+    background: var(--white);
+    border-radius: 20px;
+    box-shadow: 0 12px 24px var(--main-shadow);
+    transform: translate(0px, -25px);
+}
+
+.container_form input{
+    border-radius: 20px 0 0 20px;
+    border: none;
+    outline: none;
+}
+
+.container_form input::placeholder{
+    color: var(--gray);
+}
+
+.container_form button{
+    background: var(--white);
+    color: var(--gray);
+    border-radius: 0 20px 20px 0;
+    border: none;
+    outline: none;
+}
+
+.book_img{
+    width: 100%;
+    aspect-ratio: 3/4;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.book_img:hover{
+    box-shadow: 0 0 24px 12px var(--main-shadow);
+    transform: translateY(-10px);
+    transition: 0.5s;
+}
+
+.book_title{
+    width: 100%;
+    cursor: pointer;
+}
+
+.book_title:hover{
+    text-decoration: underline;
+}
+
+.book_author{
+    width: 100%;
+}
+
+.book_link{
+    background: var(--purple);
+    text-decoration: none;
+    color: var(--main);
+}
+
+.book_link:hover{
+    opacity: 90%;
+    color: var(--main);
+}
+
+.book_link:active{
+    transform: scale(0.95);
+}
+
+.book_link_disable{
+    background: var(--purple);
+    text-decoration: none;
+    color: var(--main);
+    opacity: 75%;
+    pointer-events: none;
+}
+
+/* Clases del footer */
+
+.container_footer{
+    background: var(--main);
+    font-family: 'Poppins', sans-serif;
+    min-height: 10vh;
+}
+
+.footer_link{
+    color: var(--purple);
+    text-decoration: none;
+}
+
+/* Clases del scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    padding: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--main);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--purple), var(--lila));
+  }
+  

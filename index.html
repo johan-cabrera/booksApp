@@ -1,25 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div id="contenedor"></div>
-    <script>
-        const contenedor = document.querySelector('#contenedor');
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Books App</title>
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/fonts/fonts.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    </head>
+    <body>
+        <header class="container-fluid container_header d-flex flex-column align-items-center justify-content-center font_color_secondary">
+            <div class="row">
+                <div class="col fst-italic display-5 text-center">
+                    “So many books, so little time”
+                </div>
+            </div>
+            <div class="row">
+                <div class="col fw-normal fs-3 text-center">
+                    Frank Zappa
+                </div>
+            </div>
+        </header>
+        <div class="modal fade" id="informationModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header position-relative">
+                    <h5 class="modal-title w-100 fs-2 font_color fw-bold text-center" id="modalTitle">Jurassic Park</h5>
+                    <button type="button" class="btn-close position-absolute end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col col-7 col-md-6 m-auto px-3">
+                            <img src="assets/img/image 6.png" alt="" class="modal_img" id="modalImg">
+                        </div>
+                        <div class="col col-12 col-md-6 font_color fs-6 p-3">
+                            <div class="row">
+                                <div class="col">
+                                    <span class="fw-bold">Author: </span> <span id="modalAuthor"> Michael Crichton </span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <span class="fw-bold">First publish year:</span> <span id="modalYear"> 1990</span> 
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <span class="fw-bold">Avg Pages:</span> <span id="modalPages">450</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <span class="fw-bold">Subjects: </span> <span id="modalSubjects"></span>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="row">
+                        <div class="col font_color fw-bold mt-3">
+                            Description:
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col font_color modal_description text-break"  id="modalDescription">
+                            Jurassic Park is a 1990 science fiction novel written by Michael Crichton. A cautionary tale about genetic engineering, it presents the collapse of an amusement park showcasing genetically re-created dinosaurs to illustrate the mathematical concept of chaos theory and its real-world implications. A sequel titled The Lost World, also written by Crichton, was published in 1995. In 1997, both novels were re-published as a single book titled Michael Crichton's Jurassic World. In 1996 it was awarded the Secondary BILBY Award.
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="book_link w-100 py-3 fs-5 text-center rounded" id="modalBuy" target="_blank"><i class="bi bi-bag-fill"></i> Buy now</a>
+                </div>
+            </div>
+            </div>
+        </div>
+            
+        </div>
+        <main class="container-fluid container_main d-flex flex-column ">
+            <section class="container-fluid w-100">
+                <form class="container_form w-25 m-auto" id="form">
+                    <div class="row h-100">
+                        <div class="col col-10 px-0">
+                            <input type="text" name="search" class="w-100 h-100 ps-4" placeholder="Search your favorite book">
+                        </div>
+                        <div class="col col-2 px-0">
+                            <button type="submit" class="w-100 h-100 text-center"><i class="bi bi-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </section>
+            <section class="container-fluid d-flex flex-column align-items-center" id="result-container">
+            
+            </section>
 
-        const escribirDom = async ()=>{
-            const requestJson = await fetch('https://openlibrary.org/search.json?q=the+lord+of+the+rings');
-            const text = await requestJson.json();
+            
+        </main>
 
-            contenedor.textContent = text.q;
-            console.log(text.q);
-        }
-
-        escribirDom();
-    </script>
-</body>
+        <footer class="container-fluid container_footer  fw-bold d-flex align-items-center">
+            <div class="container-fluid">
+                <div class="row ">
+                    <div class="col text-center font_color"> 
+                        Designed & Built by Johan Cabrera <br>
+                    powered by <a href="https://openlibrary.org" class="footer_link" target="_blank">openlibrary.org</a>  
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+    <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
 </html>
