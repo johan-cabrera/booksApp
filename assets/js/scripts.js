@@ -104,7 +104,7 @@ const addColumn = (key, title, first_publish_year, number_of_pages_median, cover
             <img src="${image}" alt="" class="book_img rounded mb-1" data-bs-toggle="modal" data-bs-target="#informationModal">
             <span class="book_title fs-5 fw-bold text-center text-truncate" data-bs-toggle="modal" data-bs-target="#informationModal">${title}</span>
             <span class="book_author fs-6 text-center text-truncate">By ${author_name}</span>
-            <a href="${goodreadsLink}" role="button" class="${hrefClass} w-100 mt-2 p-1 text-center  rounded" target="_blank"><i class="bi bi-bag-fill"></i> Buy now</a>
+            <a href="${goodreadsLink}" role="button" class="${hrefClass} w-100 mt-2 p-1 text-center rounded" target="_blank"><i class="bi bi-cart-fill"></i> Buy now</a>
         </div>
     `;
 

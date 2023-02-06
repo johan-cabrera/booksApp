@@ -1,11 +1,11 @@
 :root{
-    --white: #FFFFFF;
-    --main: #F5F6FF;
-    --gray: #979797;
-    --lila: #DC92EF;
-    --purple: #846cc7;
-    --main-shadow: #D3D5E3;
-    --main-text: #554D68;
+    --white: rgb(244, 245, 255);
+    --main: rgb(227, 228, 244);
+    --gray: rgb(151, 151, 151);
+    --transparent: rgba(97, 97, 97, 0.5);
+    --blue: rgb(77, 104, 236);
+    --main-shadow: rgb(189, 192, 216);
+    --main-text: rgb(55, 53, 61);
 }
 
 /* Clases Generales */
@@ -27,7 +27,15 @@ html, body{
 .container_header{
     height: 30vh;
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(180deg, var(--purple), var(--lila));
+    background-image: url('/assets/img/header.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.header_text{
+    background: var(--transparent);
+    border: 3px solid var(--main);
+    backdrop-filter: blur(10px);
 }
 
 /* Clases del modal */
@@ -63,8 +71,9 @@ html, body{
 }
 
 .container_form input{
-    border-radius: 20px 0 0 20px;
+    background: var(--white);
     border: none;
+    border-radius: 20px 0 0 20px;
     outline: none;
 }
 
@@ -88,7 +97,7 @@ html, body{
 }
 
 .book_img:hover{
-    box-shadow: 0 0 24px 12px var(--main-shadow);
+    box-shadow: 0 0 24px 8px var(--main-shadow);
     transform: translateY(-10px);
     transition: 0.5s;
 }
@@ -107,9 +116,10 @@ html, body{
 }
 
 .book_link{
-    background: var(--purple);
+    background: var(--blue);
     text-decoration: none;
     color: var(--main);
+    box-shadow: 0 8px 24px var(--main-shadow);
 }
 
 .book_link:hover{
@@ -122,12 +132,13 @@ html, body{
 }
 
 .book_link_disable{
-    background: var(--purple);
+    background: var(--blue);
     text-decoration: none;
     color: var(--main);
     opacity: 75%;
     pointer-events: none;
 }
+
 
 /* Clases del footer */
 
@@ -138,7 +149,7 @@ html, body{
 }
 
 .footer_link{
-    color: var(--purple);
+    color: var(--blue);
     text-decoration: none;
 }
 
@@ -153,6 +164,6 @@ html, body{
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, var(--purple), var(--lila));
+    background: var(--gray);
   }
   
